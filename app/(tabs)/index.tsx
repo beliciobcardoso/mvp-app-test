@@ -35,7 +35,7 @@ export default function HomeScreen() {
       </ScrollView>
       <AlertDialog isOpen={showAlertDialog} onClose={handleClose} size="md">
         <AlertDialogBackdrop />
-        <AlertDialogContent>
+        <AlertDialogContent className="bg-[#6ea9b1] border-0">
           <AlertDialogHeader>
             <Heading className="text-typography-950 font-semibold" size="md">
               Deseja responder o formulário dessa atividade?
@@ -51,10 +51,10 @@ export default function HomeScreen() {
               onPress={handleClose}
               size="sm"
             >
-              <ButtonText>Cancel</ButtonText>
+              <ButtonText action="secondary">Cancel</ButtonText>
             </Button>
             <Button size="sm" onPress={handleClose}>
-              <ButtonText action="negative" >Confirmar</ButtonText>
+              <ButtonText action="primary" >Confirmar</ButtonText>
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
